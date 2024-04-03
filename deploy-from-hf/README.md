@@ -1,4 +1,4 @@
-## SparseGPT + nm-vllm
+## Deploy models from HF Hub
 
 #### Install SparseML
 
