@@ -1,4 +1,4 @@
-## Use SparseML to apply Prune A Model
+## SparseGPT + vLLM
 
 #### Install SparseML
 
@@ -18,6 +18,8 @@ python3 run_sparsegpt.py
 
 ## Deploy with nm-vllm
 
+You can either use our Docker image or install via PyPI.
+
 ### Docker
 
 Pull down the Docker image:
@@ -34,11 +36,11 @@ docker run \
     --gpus all \
     --shm-size 2g \
     -p 8000:8000 \
-    -v $PWD/tinyllama-pruned:/data/tinyllama-pruned \
-    nm-vllm:v0.1.0 --model /data/tinyllama-pruned --sparsity sparse_w16a16
+    -v $PWD/very-tiny-llama-pruned:/data/very-tiny-llama-pruned \
+    nm-vllm:v0.1.0 --model /data/very-tiny-llama-pruned --sparsity sparse_w16a16
 ```
 
-### PyPi
+### PyPI
 
 Install nm-vllm:
 
@@ -51,7 +53,16 @@ pip install nm-vllm[sparse]
 Launch the server:
 
 ```bash
-python3 -m vllm.entrypoints.openai.api_server --model tinyllama-pruned --sparsity sparse_w16a16
+python3 -m vllm.entrypoints.openai.api_server --model ./very-tiny-llama-pruned --sparsity sparse_w16a16
+```
+
+Note: we can also run via Python.
+
+```python
+from vllm import LLM, SamplingParams
+model = LLM("./very-tiny-llama-pruned", sparsity="sparse_w16a16")
+output = model.generate("Mario jumped", SamplingParams(max_tokens=10, temperature=0))
+print(output[0].outputs[0].text)
 ```
 
 ## Query the model

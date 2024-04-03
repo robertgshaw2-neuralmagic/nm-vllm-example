@@ -1,8 +1,8 @@
 import sparseml.transformers
 
-original_model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+original_model_name = "Xenova/llama2.c-stories110M"
 calibration_dataset = "open_platypus"
-output_directory = "tinyllama-pruned"
+output_directory = "very-tiny-llama-pruned"
 
 recipe = """
 test_stage:
