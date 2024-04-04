@@ -1,6 +1,8 @@
-## SparseGPT + nm-vllm
+# SparseGPT + nm-vllm
 
-#### Install SparseML
+## Apply SparseGPT with SparseML
+
+### Install SparseML
 
 ```bash
 python3 -m venv sparseml-env
@@ -8,7 +10,7 @@ source sparseml-env/bin/activate
 pip install sparseml[transformers]
 ```
 
-#### Apply SparseGPT
+### Apply SparseGPT
 
 Apply SparseGPT as we did before:
 
