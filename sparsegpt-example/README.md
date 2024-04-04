@@ -33,7 +33,7 @@ docker pull ghcr.io/neuralmagic/nm-vllm-openai:v0.1.0
 docker tag ghcr.io/neuralmagic/nm-vllm-openai:v0.1.0 nm-vllm:v0.1.0
 ```
 
-#### Deploy the model:
+Deploy the model:
 
 ```bash
 docker run \
