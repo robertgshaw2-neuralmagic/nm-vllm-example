@@ -1,5 +1,7 @@
 # SparseGPT + nm-vllm
 
+In this example, we will apply SparseGPT to a toy model using `sparseml` and run inference with sparse inference kernels using `nm-vllm`
+
 ## Apply SparseGPT with SparseML
 
 ### Install SparseML
