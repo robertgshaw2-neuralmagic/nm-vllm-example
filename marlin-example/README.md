@@ -27,7 +27,7 @@ docker run \
     nm-vllm:v0.1.0 --model neuralmagic/zephyr-7b-beta-marlin --max-model-len 4096 --disable-log-requests
 ```
 
-### Benchmark The INT4 Model
+### Benchmark the INT4 Model
 
 When evaluating LLM performance, there are two latency metrics to consider. 
 - TTFT (Time to first token) measures how long it takes to generate the first token. 
