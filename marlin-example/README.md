@@ -78,7 +78,7 @@ P99 TPOT (ms):                           21.41
 ==================================================
 ```
 
-### Deploy FP16 Model via Docker
+### Deploy FP16 Model
 
 Now, let's deploy the FP16 model.
 
